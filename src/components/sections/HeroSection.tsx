@@ -1,12 +1,13 @@
 import { motion } from 'framer-motion'
 import { Button } from '../ui/Button'
 import { useReducedMotion } from '../../hooks/useReducedMotion'
+import { Github } from 'lucide-react'
 
 export function HeroSection() {
   const reducedMotion = useReducedMotion()
 
-  const scrollToDemo = () => {
-    const element = document.querySelector('#demo')
+  const scrollToTryIt = () => {
+    const element = document.querySelector('#try-it')
     if (element) {
       const navHeight = 80
       const elementPosition = element.getBoundingClientRect().top + window.scrollY
@@ -73,6 +74,7 @@ export function HeroSection() {
           </motion.p>
 
           <motion.div
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             initial={reducedMotion ? {} : { opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
@@ -80,11 +82,20 @@ export function HeroSection() {
             <Button
               data-testid="hero-cta"
               size="lg"
-              onClick={scrollToDemo}
+              onClick={scrollToTryIt}
               className="shadow-lg shadow-indigo-500/30"
             >
-              See It In Action
+              Try It Now
             </Button>
+            <a
+              href="https://github.com/TumblingZhang/cc-orchestrator"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-white/20 bg-white/5 text-white font-medium hover:bg-white/10 hover:border-white/30 transition-all duration-300"
+            >
+              <Github className="w-5 h-5" />
+              GitHub
+            </a>
           </motion.div>
         </motion.div>
       </div>
