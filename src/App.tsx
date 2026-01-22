@@ -14,11 +14,11 @@ function App() {
 
       <main id="main">
         <HeroSection />
-        <FeaturesSection />
-        <TryItSection />
-        <AgentsSection />
         <DemoSection />
+        <FeaturesSection />
+        <AgentsSection />
         <WorkflowSection />
+        <TryItSection />
       </main>
 
       <Footer />
