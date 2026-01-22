@@ -45,6 +45,25 @@ export function TryItSection() {
           </p>
         </motion.div>
 
+        {/* Compatibility note */}
+        <motion.div
+          className="mb-8"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
+          <div className="flex flex-wrap items-center justify-center gap-3 text-sm text-white/50">
+            <span>Works with:</span>
+            <span className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-white/70">Claude Code</span>
+            <span className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-white/70">Codex</span>
+            <span className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-white/70">Cursor</span>
+            <span className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-white/70">Windsurf</span>
+            <span className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-white/70">Cline</span>
+            <span className="text-white/40">& more</span>
+          </div>
+        </motion.div>
+
         {/* Steps */}
         <div className="space-y-6 mb-12">
           {/* Step 1 */}
@@ -60,43 +79,19 @@ export function TryItSection() {
                   <span className="text-white font-bold">1</span>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-white font-semibold text-lg mb-2">Install Claude Code</h3>
-                  <div className="bg-dark-900/80 rounded-lg p-4 font-mono text-sm">
-                    <code className="text-emerald-400">npm install -g @anthropic-ai/claude-code</code>
-                  </div>
+                  <h3 className="text-white font-semibold text-lg mb-2">Open your AI coding assistant</h3>
+                  <p className="text-white/60 text-sm">Claude Code, Codex, Cursor, Windsurf, Cline, or any AI tool that can fetch from GitHub</p>
                 </div>
               </div>
             </GlassCard>
           </motion.div>
 
-          {/* Step 2 */}
+          {/* Step 2 - Quick Start */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-          >
-            <GlassCard className="p-6">
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-indigo-500 to-purple-500 flex items-center justify-center flex-shrink-0">
-                  <span className="text-white font-bold">2</span>
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-white font-semibold text-lg mb-2">Run Claude Code</h3>
-                  <div className="bg-dark-900/80 rounded-lg p-4 font-mono text-sm">
-                    <code className="text-emerald-400">claude</code>
-                  </div>
-                </div>
-              </div>
-            </GlassCard>
-          </motion.div>
-
-          {/* Step 3 - Quick Start */}
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.3 }}
           >
             <GlassCard className="p-6 border-indigo-500/30">
               <div className="flex items-start gap-4">
@@ -104,8 +99,8 @@ export function TryItSection() {
                   <Sparkles className="w-5 h-5 text-white" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-white font-semibold text-lg mb-1">Quick Start</h3>
-                  <p className="text-white/60 text-sm mb-4">Copy & paste this into Claude Code:</p>
+                  <h3 className="text-white font-semibold text-lg mb-1">Paste this prompt</h3>
+                  <p className="text-white/60 text-sm mb-4">Copy & paste — it works in any compatible AI coding tool:</p>
                   <div className="bg-dark-900/80 rounded-lg p-4 relative group">
                     <pre className="text-sm text-white/90 whitespace-pre-wrap break-words font-mono leading-relaxed">
                       <span className="text-white/80">Fetch https://github.com/TumblingZhang/cc-orchestrator and use @cc-orchestrator/agents/MANAGER.md to </span>
