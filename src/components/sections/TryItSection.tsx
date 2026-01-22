@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import { GlassCard } from '../ui/GlassCard'
 import { Terminal, Copy, Check, Sparkles } from 'lucide-react'
 
-const quickStartCommand = `Fetch https://github.com/TumblingZhang/cc-orchestrator and use @cc-orchestrator/agents/MANAGER.md to [build 3 versions of a personal portfolio website]`
+const quickStartCommand = `Fetch https://github.com/TumblingZhang/cc-orchestrator and use @cc-orchestrator/agents/MANAGER.md to [build 3 versions of a personal portfolio website and open them in browser]`
 
 const exampleReplacements = [
   'build a task management app with 3 different UI styles',
@@ -109,7 +109,7 @@ export function TryItSection() {
                   <div className="bg-dark-900/80 rounded-lg p-4 relative group">
                     <pre className="text-sm text-white/90 whitespace-pre-wrap break-words font-mono leading-relaxed">
                       <span className="text-white/80">Fetch https://github.com/TumblingZhang/cc-orchestrator and use @cc-orchestrator/agents/MANAGER.md to </span>
-                      <span className="text-indigo-400 bg-indigo-500/20 px-1 rounded">[build 3 versions of a personal portfolio website]</span>
+                      <span className="text-indigo-400 bg-indigo-500/20 px-1 rounded">[build 3 versions of a personal portfolio website and open them in browser]</span>
                     </pre>
                     <button
                       onClick={handleCopy}
