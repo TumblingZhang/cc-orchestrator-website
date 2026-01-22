@@ -3,12 +3,12 @@ import { motion } from 'framer-motion'
 import { GlassCard } from '../ui/GlassCard'
 import { Terminal, Copy, Check, Sparkles } from 'lucide-react'
 
-const quickStartCommand = `Fetch https://github.com/TumblingZhang/cc-orchestrator and use @cc-orchestrator/agents/MANAGER.md to build 3 versions of a personal portfolio website`
+const quickStartCommand = `Fetch https://github.com/TumblingZhang/cc-orchestrator and use @cc-orchestrator/agents/MANAGER.md to [build 3 versions of a personal portfolio website]`
 
-const examplePrompts = [
-  'build 3 versions of a task management app',
-  'create a habit tracker - give me 5 versions to compare',
-  'design a landing page for my startup idea',
+const exampleReplacements = [
+  'build a task management app with 3 different UI styles',
+  'create 5 versions of a habit tracker to compare',
+  'design a landing page for my startup',
 ]
 
 export function TryItSection() {
@@ -108,7 +108,8 @@ export function TryItSection() {
                   <p className="text-white/60 text-sm mb-4">Copy & paste this into Claude Code:</p>
                   <div className="bg-dark-900/80 rounded-lg p-4 relative group">
                     <pre className="text-sm text-white/90 whitespace-pre-wrap break-words font-mono leading-relaxed">
-                      {quickStartCommand}
+                      <span className="text-white/80">Fetch https://github.com/TumblingZhang/cc-orchestrator and use @cc-orchestrator/agents/MANAGER.md to </span>
+                      <span className="text-indigo-400 bg-indigo-500/20 px-1 rounded">[build 3 versions of a personal portfolio website]</span>
                     </pre>
                     <button
                       onClick={handleCopy}
@@ -128,7 +129,7 @@ export function TryItSection() {
           </motion.div>
         </div>
 
-        {/* Example prompts */}
+        {/* Example replacements */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -138,18 +139,18 @@ export function TryItSection() {
           <GlassCard className="p-6">
             <div className="flex items-center gap-3 mb-4">
               <Terminal className="w-5 h-5 text-indigo-400" />
-              <h3 className="text-white font-semibold">Or try your own ideas</h3>
+              <h3 className="text-white font-semibold">Replace <code className="px-2 py-0.5 bg-indigo-500/20 rounded text-indigo-300">[...]</code> with your idea</h3>
             </div>
             <p className="text-white/60 text-sm mb-4">
-              Just describe what you want — even vague ideas work:
+              Swap the bracketed text with any vague idea you have:
             </p>
             <div className="flex flex-wrap gap-2">
-              {examplePrompts.map((prompt, index) => (
+              {exampleReplacements.map((prompt, index) => (
                 <span
                   key={index}
                   className="px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-white/70 text-sm"
                 >
-                  "{prompt}"
+                  [{prompt}]
                 </span>
               ))}
             </div>
