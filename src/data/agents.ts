@@ -1,0 +1,78 @@
+import {
+  Terminal,
+  Sparkles,
+  Lightbulb,
+  Scale,
+  ClipboardList,
+  GitBranch,
+  Code,
+  TestTube,
+} from 'lucide-react'
+import type { Agent } from '../types/agent'
+
+export const agents: Agent[] = [
+  {
+    id: 'manager',
+    name: 'Manager',
+    role: 'Orchestration Controller',
+    description: 'The only agent that talks to the user. Coordinates all workflows and manages agent communication.',
+    icon: Terminal,
+    color: '#6366F1',
+  },
+  {
+    id: 'direction-dreamer',
+    name: 'Direction Dreamer',
+    role: 'Multi-Version Strategist',
+    description: 'Generates N strategic directions for multi-version mode, enabling parallel exploration.',
+    icon: Sparkles,
+    color: '#8B5CF6',
+  },
+  {
+    id: 'dreamer',
+    name: 'Dreamer',
+    role: 'Creative Ideation',
+    description: 'Dreams big features and innovative solutions. Pushes boundaries of what is possible.',
+    icon: Lightbulb,
+    color: '#F59E0B',
+  },
+  {
+    id: 'critic',
+    name: 'Critic',
+    role: 'Alignment Verification',
+    description: 'Ensures features align with goals. Controls scope and maintains focus on requirements.',
+    icon: Scale,
+    color: '#EF4444',
+  },
+  {
+    id: 'pm',
+    name: 'PM',
+    role: 'Product Specifications',
+    description: 'Creates detailed user stories and acceptance criteria. Bridges vision and implementation.',
+    icon: ClipboardList,
+    color: '#10B981',
+  },
+  {
+    id: 'techlead',
+    name: 'TechLead',
+    role: 'Architecture Design',
+    description: 'Designs system architecture, assesses feasibility, and reviews code quality.',
+    icon: GitBranch,
+    color: '#3B82F6',
+  },
+  {
+    id: 'developer',
+    name: 'Developer',
+    role: 'Implementation',
+    description: 'Implements features in parallel. Multiple developers can work simultaneously.',
+    icon: Code,
+    color: '#06B6D4',
+  },
+  {
+    id: 'qa',
+    name: 'QA',
+    role: 'Testing & Verification',
+    description: 'Writes tests before development. Verifies implementation meets acceptance criteria.',
+    icon: TestTube,
+    color: '#EC4899',
+  },
+]
